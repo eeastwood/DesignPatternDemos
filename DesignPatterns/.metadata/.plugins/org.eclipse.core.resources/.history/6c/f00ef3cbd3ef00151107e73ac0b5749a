@@ -1,0 +1,46 @@
+package com.composite.ed;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Employee {
+   private String name;
+   private String dept;
+   private int salary;
+   private List<Employee> mSubordinates;
+
+  
+   public Employee(String name,String dept, int sal) {
+      this.name = name;
+      this.dept = dept;
+      this.salary = sal;
+      mSubordinates = new ArrayList<Employee>();
+   }
+
+   public void add(Employee e) {
+      mSubordinates.add(e);
+   }
+
+   public void remove(Employee e) {
+      mSubordinates.remove(e);
+   }
+
+   public List<Employee> getSubordinates(){
+     return mSubordinates;
+   }
+   
+   public String printSubordinates(){
+	   String subordinates = "";
+	   
+	   for(Employee employee: getSubordinates()){
+		   subordinates+= employee.name + " ";
+	   }
+	   subordinates += "\n";
+	   return subordinates; 
+   }
+
+   public String toString(){
+      return ("Employee :[ Name : " + name + ", dept : " + dept + ", salary :" + salary+" ] \n" +
+    		  	"Subordinates: " + printSubordinates());
+   }   
+}

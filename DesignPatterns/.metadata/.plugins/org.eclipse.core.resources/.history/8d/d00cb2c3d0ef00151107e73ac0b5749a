@@ -1,0 +1,5 @@
+package com.strategy.ed;
+
+public interface Strategy {
+
+}

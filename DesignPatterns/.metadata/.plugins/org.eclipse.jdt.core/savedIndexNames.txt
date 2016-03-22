@@ -1,0 +1,5 @@
+INDEX VERSION 1.127+C:\Users\eeastwood\workspace\.metadata\.plugins\org.eclipse.jdt.core
+2540368625.index
+389389742.index
+3266558612.index
+1735216945.index
